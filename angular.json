@@ -102,6 +102,40 @@
           }
         }
       }
+    },
+    "mat-sign-in": {
+      "projectType": "library",
+      "root": "projects/mat-sign-in",
+      "sourceRoot": "projects/mat-sign-in/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mat-sign-in/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mat-sign-in/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mat-sign-in/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mat-sign-in/src/test.ts",
+            "tsConfig": "projects/mat-sign-in/tsconfig.spec.json",
+            "karmaConfig": "projects/mat-sign-in/karma.conf.js"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "d2694935-f622-4ebb-81b3-6f960d3a5ffe"
   }
 }
